@@ -1,0 +1,65 @@
+.footer {
+  grid-column: full-start / full-end;
+  padding: 8rem;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2.4rem;
+  list-style: none;
+  align-items: center;
+
+  &__link:focus {
+    outline: none;
+    outline: 2px solid #1F3998;
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: inherit;
+    letter-spacing: 0.75px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.2rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__link:hover,
+  &__link:active {
+    background-color: #152865;
+    transform: translateY(-0.5rem);
+    box-shadow: 0 2rem 4rem rgba(25, 47, 118, 0.25);
+  }
+}
+
+.copyright {
+    font-size: 1.6rem;
+    margin-top: 6.4rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    letter-spacing: 0.75px;
+
+    &__link:focus {
+      outline: none;
+      outline: 2px solid #1F3998;
+      outline-offset: 4px;
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__link:hover,
+    &__link:active {
+        color: #8390FA;
+    }
+}

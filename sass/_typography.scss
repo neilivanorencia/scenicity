@@ -1,0 +1,60 @@
+%heading {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-style: italic;
+  color: #a4cbab;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: 4.8rem;
+  color: #8390FA;
+  line-height: 1;
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 3.6rem;
+  line-height: 1;
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 2.4rem;
+  color: #FCDB88;
+  letter-spacing: 0.5px;
+
+  &__sub {
+    color: #ECEDFE;
+  }
+}
+
+.heading-4 {
+  font-size: 2rem;
+  @extend %heading;
+}
+
+.btn {
+  background-color: #FF5C7A;
+  color: #ECEDFE;
+  font-family: $font-display;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  border: none;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  padding: 1.6rem 3.2rem;
+  transition: all 0.3s ease-in-out;
+
+  &:focus {
+    outline: none;
+    outline: 2px solid #FF5C7A;
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    background-color: #FF859B;
+  }
+}

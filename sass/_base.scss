@@ -1,0 +1,81 @@
+/*
+    https://coolors.co/0f1a43-8390fa-fbcf60-7db587-ff99ac
+*/
+
+$font-primary: "Lora", serif;
+$font-display: "DM Sans", sans-serif;
+
+$bp-largest: 75em;
+$bp-large: 62.5em;
+$bp-medium: 50em;
+$bp-small: 37.5em;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3b51f7;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1c3387;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-display;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: #0f1a43;
+  color: #c5cafc;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh min-content 40vw repeat(3, min-content);
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr)
+    [center-start] repeat(
+      8,
+      [column-start] minmax(min-content, 14rem) [column-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 100vh min-content min-content min-content repeat(3, min-content);
+  }
+}
+
+.mb-small {
+  margin-bottom: 2.4rem;
+}
+
+.mb-medium {
+  margin-bottom: 3.6rem;
+}
+
+.mb-large {
+  margin-bottom: 4.8rem;
+}
+
+.mb-huge {
+  margin-bottom: 6.4rem;
+}

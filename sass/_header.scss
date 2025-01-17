@@ -1,0 +1,68 @@
+.header {
+  grid-column: full-start / column-end 6;
+  background-image: linear-gradient(rgba(#172664, 0.95), rgba(#172664, 0.95)),
+    url("../img/city-night.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 8rem;
+  padding-top: 4rem;
+
+  display: grid;
+  grid-template-rows: 0.5fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 1.6rem;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 4.8rem;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  &__logo {
+    height: 5.6rem;
+    justify-self: center;
+  }
+
+  &__seen-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.6rem;
+    align-items: center;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #a4cbab;
+
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      height: 1px;
+      background-color: currentColor;
+    }
+  }
+
+  &__seen-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1.6rem;
+    justify-items: center;
+    align-items: center;
+
+    img {
+      max-height: 3.2rem;
+      max-width: 100%;
+      filter: brightness(80%);
+    }
+  }
+}
